@@ -16,7 +16,8 @@ pipeline {
         stage("Create Jira ticket for cleanup") {
             steps {
                 script {
-                echo "${JIRA_TICKET}"
+                    echo "${JIRA_TICKET}"
+                }
             }
         }
     }
