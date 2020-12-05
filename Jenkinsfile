@@ -21,8 +21,11 @@ pipeline {
             variable: 'auth')
         ]) {
           script {
-            echo "${auth}"
+            JIRA_TICKET = sh(script: '''
+              echo "hello"
+            ''', returnStdout: true).trim()
           }
+          echo "${JIRA_TICKET}"
         }
       }
     }
