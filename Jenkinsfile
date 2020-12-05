@@ -3,6 +3,7 @@
 JIRA_TICKET = 'Not Applicable'
 
 pipeline {
+    agent any
     options {
         timeout(time: 60, unit: 'MINUTES')
         retry(0)
